@@ -1,14 +1,57 @@
-console.log("Welcome to ChatterBox!")
+console.log("Welcome back!")
 sleep(2000);
 text = prompt("Log in || Sign Up").toLowerCase()
 if text = 'log in' {
-  text = prompt("Username");
+  playeruser = prompt("Username");
+  playerpassword = prompt("Password")
+  console.log("");
+  console.log("You are now logged in.");
   } else {
   playeruser = prompt("Enter a username.");
   console.log("User: " + playeruser);
   playerpassword = prompt("Enter a password.");
   console.log
-  console.log("Your account has been created.");
- 
+  console.log("Your account has been created. Welcome to ChatterBox!");
  }
+ console.log("");
+ console.log("-----------");
+ console.log("");
+ console.log('Press 'p' to post something to your wall.");
+ import java.awt.KeyEventDispatcher;
+import java.awt.KeyboardFocusManager;
+import java.awt.event.KeyEvent;
+
+public class IsKeyPressed {
+    private static boolean pPressed = false;
+    public static boolean isPPressed() {
+        synchronized (IsKeyPressed.class) {
+            return pPressed;
+        }
+    }
+
+    public static void main(String[] args) {
+        KeyboardFocusManager.getCurrentKeyboardFocusManager().addKeyEventDispatcher(new KeyEventDispatcher() {
+
+            @Override
+            public boolean dispatchKeyEvent(KeyEvent ke) {
+                synchronized (IsKeyPressed.class) {
+                    switch (ke.getID()) {
+                    case KeyEvent.KEY_PRESSED:
+                        if (ke.getKeyCode() == KeyEvent.VK_P) {
+                            pPressed = true;
+                        }
+                        break;
+
+                    case KeyEvent.KEY_RELEASED:
+                        if (ke.getKeyCode() == KeyEvent.VK_P) {
+                            pPressed = false;
+                        }
+                        break;
+                    }
+                    return false;
+                }
+            }
+        });
+    }
+}
   
