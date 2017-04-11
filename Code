@@ -54,4 +54,7 @@ public class IsKeyPressed {
         });
     }
 }
-  
+ if (IsKeyPressed.isPPressed()) {
+  text = prompt("");
+  console.log(text);
+}
