@@ -56,5 +56,77 @@ public class IsKeyPressed {
 }
  if (IsKeyPressed.isPPressed()) {
   text = prompt("");
-  console.log(text);
+  console.log(username+ ":" + text);
 }
+sleep(4000);
+console.log("!!");
+console.log("");
+console.log("One new notification! (Press 'o' to open)");
+notifications = 1;
+notification_text = "Amanda has sent you a friend request."
+ import java.awt.KeyEventDispatcher;
+import java.awt.KeyboardFocusManager;
+import java.awt.event.KeyEvent;
+
+public class IsKeyOressed {
+    private static boolean oPressed = false;
+    public static boolean isOPressed() {
+        synchronized (IsKeyPressed.class) {
+            return oPressed;
+        }
+    }
+
+    public static void main(String[] args) {
+        KeyboardFocusManager.getCurrentKeyboardFocusManager().addKeyEventDispatcher(new KeyEventDispatcher() {
+
+            @Override
+            public boolean dispatchKeyEvent(KeyEvent ke) {
+                synchronized (IsKeyPressed.class) {
+                    switch (ke.getID()) {
+                    case KeyEvent.KEY_PRESSED:
+                        if (ke.getKeyCode() == KeyEvent.VK_O) {
+                            oPressed = true;
+                        }
+                        break;
+
+                    case KeyEvent.KEY_RELEASED:
+                        if (ke.getKeyCode() == KeyEvent.VK_O) {
+                            oPressed = false;
+                        }
+                        break;
+                    }
+                    return false;
+                }
+            }
+        });
+    }
+}
+if (IsKeyPressed.isoPressed()) {
+  if (notifications = 0) {
+  console.log("You have no notifications.")
+  } else {
+  console.log(notification_text1)
+  console.log(notification_text2)
+  console.log(notification_text3)
+  console.log(notification_text4)
+  console.log(notification_text5)
+  switch {
+  case notification1_type = friendrequestAmanda
+  friendstatusAmanda = prompt('Accept friend request? [y or n]').toLowerCase()
+  if (friendstatusAmanda = 'y')
+  console.log("You are now friends with Amanda.")
+  } else {
+  console.log("Friend request denied.")
+  console.log('')
+  console.log("-------")
+  console.log('')
+  
+  break;
+  
+  } else {
+  console.log('')
+  console.log('-------')
+  console.log('')
+  }
+  }
+  
