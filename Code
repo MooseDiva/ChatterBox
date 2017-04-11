@@ -1,7 +1,14 @@
+console.log("Welcome to ChatterBox!")
+sleep(2000);
 text = prompt("Log in || Sign Up").toLowerCase()
 if text = 'log in' {
   text = prompt("Username");
   } else {
-  text = prompt("Enter a username.");
+  playeruser = prompt("Enter a username.");
+  console.log("User: " + playeruser);
+  playerpassword = prompt("Enter a password.");
+  console.log
+  console.log("Your account has been created.");
+ 
  }
   
