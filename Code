@@ -1,1 +1,7 @@
-console.log("Hello");
+text = prompt("Log in || Sign Up").toLowerCase()
+if text = 'log in' {
+  text = prompt("Username");
+  } else {
+  text = prompt("Enter a username.");
+ }
+  
