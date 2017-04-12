@@ -1,4 +1,10 @@
 console.log("Welcome back!")
+notification_text1 = ("")
+notification_text2 = ("")
+notification_text3 = ("")
+notification_text4 = ("")
+notification_text5 = ("")
+reply = ("")
 sleep(2000);
 text = prompt("Log in || Sign Up").toLowerCase()
 if text = 'log in' {
@@ -57,13 +63,14 @@ public class IsKeyPressed {
  if (IsKeyPressed.isPPressed()) {
   text = prompt("");
   console.log(username+ ":" + text);
+  postnumber = postnumber + 1
 }
 sleep(4000);
 console.log("!!");
 console.log("");
 console.log("One new notification! (Press 'o' to open)");
 notifications = 1;
-notification_text = "Amanda has sent you a friend request."
+notification_text1 = "Amanda has sent you a friend request."
  import java.awt.KeyEventDispatcher;
 import java.awt.KeyboardFocusManager;
 import java.awt.event.KeyEvent;
@@ -129,4 +136,12 @@ if (IsKeyPressed.isoPressed()) {
   console.log('')
   }
   }
-  
+  console.log("Amanda: Am I the only one who's hungry?");
+  sleep(2000);
+  reply = prompt("Reply? [y/n]").toLowerCase()
+  if reply = 'y' {
+  sleep(2000);
+  reply = prompt("")
+  console.log("   ->" + username + reply)
+  } else {
+  console.log("
