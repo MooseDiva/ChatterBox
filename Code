@@ -127,6 +127,9 @@ if (IsKeyPressed.isoPressed()) {
   console.log('')
   console.log("-------")
   console.log('')
+  case 'like'
+  if postnumber != 1 {
+  nofication
   
   break;
   
@@ -144,4 +147,5 @@ if (IsKeyPressed.isoPressed()) {
   reply = prompt("")
   console.log("   ->" + username + reply)
   } else {
-  console.log("
+  console.log("")
+  
